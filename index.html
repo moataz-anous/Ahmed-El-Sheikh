@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فتوحشتاين</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <svg id="earth" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 504.1 504.1" style="enable-background:new 0 0 504.1 504.1;" xml:space="preserve">
+                    <path class="st0" d="M396.2 389.4c-3.2-5.5-10.6-7.5-16.1-4.3-101.2 58.3-230.8 24-289.1-76C33.1 209.1 68.1 80.3 169.4 22c5.5-3.2 7.5-10.6 4.3-16.1s-10.6-7.5-16.1-4.3c-112.6 65-151.6 208.3-87 319.4 40.2 69.3 110.7 109.9 185.5 115.4v32.3h-45.3c-9.8 0-17.7 7.9-17.7 17.7 0 9.8 7.9 17.7 17.7 17.7h114.2c9.8 0 17.7-7.9 17.7-17.7 0-9.8-7.9-17.7-17.7-17.7h-48.4 3.2v-31.5c38.2-.8 76.8-11 112.2-31.5C397.4 402 399.4 395 396.2 389.4z"></path>
+                    <g id="earth_shape">
+                      <path class="st1" d="M275.7 15.7c104.4 0 189 84.7 189 189s-84.7 189-189 189-189-84.7-189-189S171.3 15.7 275.7 15.7z"></path>
+                      <path class="st2" d="M416.7 330.8c13-50.4 24.8-123.3-12.6-115-35.8 7.9-80.3 16.5-101.6 19.7s-46.9-18.1-75.6-33.5c-3.9-16.1-4.3-24.8 18.1-41.4 22.8-16.9 33.5 16.1 42.5 6.3 15-18.1 4.7-35.1 24-74.4 19.3-38.6 21.3-32.7 35.1-63-21.7-8.7-45.7-13.8-70.9-13.8-73.3 0-136.7 41.7-168.2 102.4 5.1 10.6 12.2 21.7 22.1 33.9 30.3 36.6 62.2 51.6 112.2 82.3 50 30.3 42.5 44.1 30.3 57.9-12.2 13.8-31.1 72.9 4.7 91.4l16.1 9.8C341.9 388.7 385.6 365.4 416.7 330.8z"></path>
+                      <path class="st3" d="M303.3 366.2c-104.4 0-189-84.7-189-189 0-45.3 15.8-86.6 42.1-119.3-42.5 35.1-69.7 87.8-69.7 146.9 0 104.4 84.7 189 189 189 59.1 0 112.2-27.2 146.9-69.7C389.9 350.5 348.6 366.2 303.3 366.2z"></path>
+                      <path class="st4" d="M417.1 328c-31.5 24-70.9 38.2-113.8 38.2-15.4 0-30.3-2-44.5-5.5 2.8 9.5 8.7 17.3 18.1 22.4 6.3 3.9 11.4 7.1 16.1 9.8h1.2l6.7-.8 2.8-.4 6.7-1.2 2.4-.4c7.5-1.6 15-3.5 22.1-5.9l2.4-.8c2-.8 3.9-1.2 5.5-2l3.5-1.2 5.1-2.4c1.2-.4 2.4-1.2 3.9-1.6l4.7-2.4 3.9-2 4.3-2.4 4.7-2.8c1.6-.8 2.8-1.6 4.3-2.8 2.4-1.6 4.3-3.2 6.7-4.3l3.2-2.4 4.7-3.5 3.2-2.4c1.6-1.2 3.2-2.4 4.3-3.5.8-.8 2-1.6 2.8-2.8l4.3-3.9c.8-.8 1.6-1.6 2.8-2.4l4.7-4.7 2-2 .4-.4C416.7 330 417.1 328.8 417.1 328L417.1 328zM118.5 137c6.3-29.1 19.7-55.9 37.8-78.8l-.4.4c-2.4 2-4.3 3.5-6.3 5.5l-2 2c-1.6 1.6-3.5 3.2-5.1 5.1l-2.4 2.4-4.7 4.7c-.8.8-1.6 1.6-2.4 2.8l-4.7 5.9c-.8.8-1.6 2-2.4 3.2l-3.2 3.9-3.2 4.3-3.2 4.7c-.8 1.2-1.6 2.4-2.4 3.9l-2.4 3.5-3.5 6.3-1.2 2C110.7 124.4 114.2 130.3 118.5 137z"></path>
+                    </g>
+                  </svg>
+                  
+                  <svg id="sun" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 454 246" style="enable-background:new 0 0 454 246;" xml:space="preserve">
+                    <g>
+                      <g id="thesun">
+                        <circle class="a0" cx="167.8" cy="79.9" r="53"></circle>
+                        <path class="a1" d="M167.8 26.9c-29.3 0-53 23.7-53 53 0 29.3 23.7 53 53 53V26.9z"></path>
+                      </g>
+                      <g id="cloud1">
+                        <path class="a2" d="M395.5 87.2h-74c-13.3 0-24.1 10.8-24.1 24.1 0 13.3 10.8 24.1 24.1 24.1h74c13.3 0 24.1-10.8 24.1-24.1C419.6 98 408.8 87.2 395.5 87.2z"></path>
+                        <path class="a3" d="M321.5 87.2c-13.3 0-24.1 10.8-24.1 24.1 0 13.3 10.8 24.1 24.1 24.1h37V87.2L321.5 87.2 321.5 87.2z"></path>
+                      </g>
+                    </g>
+                    <g id="cloud2">
+                      <path class="a2" d="M265.5 147.2h-74c-13.3 0-24.1 10.8-24.1 24.1 0 13.3 10.8 24.1 24.1 24.1h74c13.3 0 24.1-10.8 24.1-24.1C289.6 158 278.8 147.2 265.5 147.2z"></path>
+                      <path class="a3" d="M191.5 147.2c-13.3 0-24.1 10.8-24.1 24.1 0 13.3 10.8 24.1 24.1 24.1h37v-48.3L191.5 147.2 191.5 147.2z"></path>
+                    </g>
+                    <g id="cloud3">
+                      <path class="a2" d="M114.5 127.2h-74c-13.3 0-24.1 10.8-24.1 24.1 0 13.3 10.8 24.1 24.1 24.1h74c13.3 0 24.1-10.8 24.1-24.1C138.6 138 127.8 127.2 114.5 127.2z"></path>
+                      <path class="a3" d="M40.5 127.2c-13.3 0-24.1 10.8-24.1 24.1 0 13.3 10.8 24.1 24.1 24.1h37v-48.3L40.5 127.2 40.5 127.2z"></path>
+                    </g>
+                  </svg>
+
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="">الرئيسية</a></li>
+                    <li><a href="">المحاضرات</a></li>
+                    <li><a href="">حساب الطالب</a></li>
+                    <li><a href="">شحن الكتاب</a></li>
+                </ul>
+            </div>
+            <div class="login">
+                <button class="button-header-pre-register"
+                    onclick="if (!window.__cfRLUnblockHandlers) return false; location.href='https://mrredaelfarouk.com/login'">
+                    تسجيل دخول
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+    
+
+
+    <section class="hero">
+        <div class="bars">
+            <div class="big"  style="top: 25%; left:10%;"></div>
+            <div class="small" style="top: 10%; left:5%;"></div>
+            <div class="midum" style="top: 50%; left:5%;"></div>
+            <div class="big" style="top: 25%; right:10%;"></div>
+            <div class="small" style="top: 10%; right:5%;"></div>
+            <div class="midum" style="top: 50%; right:5%;"></div>
+            <div class="midum" style="top: 25%; right: 5%;"></div>
+            <div class="small" style="top: 30%; left: 7%;"></div>
+        </div>
+        <div class="section-hero-main" id="hero">
+            <div class="hero-img" id="img" style='transform: translate(460.611px, 150px) scale(1);'>
+                <div class="img-hero">
+                    <img src="./profile.e856a7d613d8be4cb62a.png" alt="">
+                </div>
+            </div>
+            <div class="hero-text">
+                <div class="hero-text" id="text" style="transform: translate(-311.002px, -160px) scale(0.5);">
+                    <div class="hero-text-small">عائلة</div>
+                    <div class="hero-text-big">أ / <span>محمد</span> أحمد الشيخ</div>
+                </div>
+                <div class="hero-text" id="text1" style="transform: translateY(359.9px) scale(0.8);
+                opacity: 0;">
+                    <div class="hero-text-smal">لكل ما يتعلق
+                        <span>بمنهج التاريخ والجغرافيا</span>
+                    </div>
+                    <div class="hero-text-bi">للثانوية العامة
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="link-section">
+        <div class="linkmain">
+            <div class="join-us">
+                <div class="link-main">
+                    <a href="" class="link">
+                     انضم الينا الان
+                    </a>
+                    <a href="" class="link">
+                        شراء الكتاب
+                    </a>
+                </div>
+            </div>
+            <div class='waves-header'>
+                <!--Waves Container-->
+                <div>
+                    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                            <path id="gentle-wave"
+                                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                        </defs>
+                        <g class="parallax">
+                            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                        </g>
+                    </svg>
+                </div>
+                <!--Waves end-->
+        
+            </div>
+        </div>
+        
+    </section>
+    <section>
+        <div class="header-txt">
+                <div class="stroke">السنوات الدراسية</div>
+                <div class="nostroke">السنوات الدراسية</div>
+        </div>
+        <div class="container">
+            
+            <div class="card">
+                <div class="imgbx">
+                    <img src="year-3.d0ff42532af39d03a4f5.jpeg">
+                </div>
+                <div class="content">
+                    <h2>الصف الثاني الثانوي</h2>
+                    <p>جميع كورسات الصف الثاني الثانوي</p>
+                    <P>اضغط هنا للاشتراك في الكورس </P>
+                    <a href="#">اشترك الان</a>
+                </div>
+            </div><!-- ../end-card  -->
+            <div class="card">
+                <div class="imgbx">
+                    <img src="year-2.b9df921e6565d31e4deb.jpeg">
+                </div>
+                <div class="content">
+                    <h2>الصف الثالث الثانوي</h2>
+                    <p>جميع كورسات الصف الثالث الثانوي</p>
+                    <P>اضغط هنا للاشتراك في الكورس </P>
+                    <a href="#">اشترك الان</a>
+                </div>
+            </div><!-- ../end-card  -->
+        </div><!-- ../end-container  -->
+    </section>
+    <div class="about">
+        <div class="about-main">
+            <article>
+                <h1>About me</h1>
+                <img src="">
+                <content>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque alias tempora perferendis
+                    officiis necessitatibus doloribus ut inventore, obcaecati beatae numquam? Beatae id vitae
+                    praesentium? Nesciunt maxime dignissimos nobis fugiat eius.
+                </content>
+                <h5>Ahmed El Sheikh</h5>
+                <p>Lorem ipsum dolor sit, amet consectetur 
+                </p>
+            </article>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Ahmed  <span> El Sheikh</span></h4>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="#">شحن الكتاب</a></li>
+
+                        <li><a href="#">الحساب الشخصي</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="#"> الرئيسية</a></li>
+                        <li><a href="#">المحاضرات</a></li>
+                        <li><a href="#">محاضراتي</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="uss">
+            <p class="us">Developed <span>By</span>.. <a href="#">mana</a>  ,  <a href="#">youssef</a> ,  <a href="#">moataz</a></p>
+            <h3> All Copy Rights Reserved @2024</h3>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+
+</html>
